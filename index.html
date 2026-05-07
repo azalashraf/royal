@@ -1,0 +1,280 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Mentors School</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-section">
+  <div class="school-logo">
+    <img src="logo.jpg" alt="School Logo">
+  </div>
+
+  <h1 class="logo">Royal Mentors School</h1>
+</div>
+
+      <ul class="nav-links">
+        <li><button class="admin-nav-btn" onclick="openAdminLogin()">Admin Panel</button></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="menu-btn" id="menu-btn">☰</div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>Welcome to</h2>
+      <h1>Royal Mentors School</h1>
+      <p>
+        Inspiring Excellence, Building Future Leaders.
+      </p>
+
+      <div class="hero-buttons">
+        <button>Admission Open</button>
+        <button class="secondary-btn" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">
+            Explore Campus
+          </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about-image">
+      <img src="school.jpg" alt="School">
+    </div>
+
+    <div class="about-content">
+      <h2>About Our School</h2>
+      <p>
+        Royal Mentors School provides high-quality education with modern teaching methods,
+        experienced teachers, and a positive learning environment.
+      </p>
+
+      <div class="stats">
+        <div class="stat-box">
+          <h3>4+</h3>
+          <p>Years Experience</p>
+        </div>
+
+        <div class="stat-box">
+          <h3>500+ </h3>
+          <p>Students</p>
+        </div>
+
+        <div class="stat-box">
+          <h3>15+</h3>
+          <p>Teachers</p>
+        </div>
+
+        <div class="stat-box">
+          <h3>98%</h3>
+          <p>Student Growth</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admin Login Modal -->
+  <div class="admin-login-modal" id="admin-login-modal">
+    <div class="admin-login-box">
+      <span class="close-btn" onclick="closeAdminLogin()">×</span>
+
+      <h2>Admin Login</h2>
+
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+
+      <button onclick="login()">Login</button>
+
+      <p id="login-message"></p>
+    </div>
+  </div>
+
+  <!-- Admin Controls -->
+  <section class="admin-panel" id="admin-panel" style="display:none;">
+    <h2>Admin Control Panel</h2>
+
+    <div class="admin-container">
+      <div class="admin-box">
+        <h3>Add Notice</h3>
+        <input type="text" id="notice-title" placeholder="Notice Title">
+        <textarea id="notice-text" placeholder="Notice Details"></textarea>
+        <button onclick="addNotice()">Add Notice</button>
+      </div>
+
+      <div class="admin-box">
+        <h3>Add Gallery Image</h3>
+        <input type="text" id="image-url" placeholder="Paste Image URL">
+        <button onclick="addImage()">Add Image</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notice Board -->
+  <section class="notice-board" id="notice">
+    <h2>School Notice Board</h2>
+
+    <div class="notice-container" id="notice-container">
+      <div class="notice-card">
+        <h3>📢 Admission Open 2026</h3>
+        <p>Admissions are now open for Nursery to Class IX.</p>
+      </div>
+
+      <div class="notice-card">
+        <h3>🚶‍♂️ Reporting Time</h3>
+        <p>Everyone should report to School before 6:40Am.</p>
+      </div>
+
+      <div class="notice-card">
+        <h3>📚 Summer Vacation</h3>
+        <p>School will be closed from last week of may .</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Director Section -->
+  <section class="director-section">
+    <div class="director-container">
+
+      <div class="director-image">
+        <img src="Director.jpg" alt="Director">
+      </div>
+
+      <div class="director-content">
+        <h2>Message From The Director</h2>
+        <p>
+          “Education is not just about books and exams. It is about building character,
+          confidence, discipline, and leadership. At Royal Mentors School, we strive to
+          nurture every student into a responsible and successful individual.”
+        </p>
+
+        <h3>- Director, Royal Mentors School</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <h2>Why Choose Us?</h2>
+
+    <div class="feature-container">
+
+      <div class="feature-card">
+        <span>📚</span>
+        <h3>Modern Education</h3>
+        <p>Smart classrooms and modern teaching techniques.</p>
+      </div>
+
+      <div class="feature-card">
+        <span>🏆</span>
+        <h3>Top Achievements</h3>
+        <p>Excellent results in academics and sports.</p>
+      </div>
+
+      <div class="feature-card">
+        <span>⚽</span>
+        <h3>Sports & Activities</h3>
+        <p>Balanced focus on studies and extracurricular activities.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery" id="gallery">
+    <h2>Campus Gallery</h2>
+
+    <div class="gallery-container" id="gallery-container">
+      <img src="g1.jpg" alt="Gallery">
+
+      <img src="g2.jpg" alt="Gallery">
+
+      <img src="g3.jpg" alt="Gallery">
+
+      <img src="g4.jpg" alt="Gallery">
+
+      <img src="g5.jpg" alt="Gallery">
+
+      <img src="g6.jpg" alt="Gallery">
+    </div>
+
+    <div class="campus-video">
+      <h3>School Introduction Video</h3>
+
+      <video controls poster="g4.jpg">
+        <source src="v.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+
+    <form id="contact-form">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="number" name="Age" placeholder="Your Age " required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <input type="int" name="Class" placeholder="Enter class" required>
+      <textarea name="Message" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+      <p id="form-message"></p>
+    </form>
+  </section>
+
+  <!-- Social & Contact Info -->
+  <section class="school-contact-info">
+    <h2>Connect With Us</h2>
+
+    <div class="contact-info-container">
+
+      <div class="info-card">
+        <h3>📞 Phone Number</h3>
+        <p>+91 98765 43210</p>
+      </div>
+
+      <div class="info-card">
+        <h3>📍 School Address</h3>
+        <p>Royal Mentors School,Gagan diwan ,Bihar sharif , Nalanda(803101), India</p>
+      </div>
+
+      <div class="info-card">
+        <h3>📸 Instagram</h3>
+        <a href="https://www.instagram.com/royalmentorsschool?igsh=MTF6eWFua3ZidW9hcA==" target="_blank">
+          <button class="insta-btn">Follow on Instagram</button>
+        </a>
+      </div>
+      <div class="info-card">
+        <h3>▶️ Youtube</h3>
+        <a href="https://www.youtube.com/@royalmentorsschool3559" target="_blank">
+          <button class="insta-btn">Subscribe</button>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Royal Mentors School | All Rights Reserved</p>
+    <p>© Developed By Azal </p>
+  </footer>
+
+  <script src="script.js"></script>
+  </body>
+</html>
