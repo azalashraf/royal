@@ -1,3 +1,4 @@
+```css
 * {
   margin: 0;
   padding: 0;
@@ -11,120 +12,13 @@ body {
   color: #333;
 }
 
-/* Admin Login Modal */
-.admin-login-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
-}
-
-.admin-login-box {
-  background: white;
-  padding: 35px;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 400px;
-  position: relative;
-  text-align: center;
-}
-
-.admin-login-box h2 {
-  color: #0b2c6a;
-  margin-bottom: 20px;
-}
-
-.admin-login-box input {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-}
-
-.admin-login-box button {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  background: #0b2c6a;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-.admin-nav-btn {
-  background: gold;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 20px;
-  cursor: pointer;
-  color: #0b2c6a;
-  font-weight: bold;
-}
-
-/* Admin Panel */
-.admin-panel {
-  padding: 80px 20px;
-  background: #fff7e6;
-  text-align: center;
-}
-
-.admin-panel h2 {
-  color: #0b2c6a;
-  margin-bottom: 40px;
-  font-size: 40px;
-}
-
-.admin-container {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 30px;
-}
-
-.admin-box {
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.admin-box input,
-.admin-box textarea {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-}
-
-.admin-box button {
-  padding: 12px 25px;
-  background: #0b2c6a;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-/* Navbar */
+/* Header */
 header {
   background: #0b2c6a;
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 .navbar {
@@ -153,11 +47,13 @@ header {
 
 .logo {
   color: white;
-  font-size: 28px;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .nav-links {
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 25px;
 }
@@ -166,56 +62,80 @@ header {
   color: white;
   text-decoration: none;
   transition: 0.3s;
+  font-size: 17px;
 }
 
 .nav-links a:hover {
   color: gold;
 }
 
+.admin-nav-btn {
+  background: gold;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #0b2c6a;
+  font-weight: bold;
+}
+
 .menu-btn {
   display: none;
   color: white;
-  font-size: 28px;
+  font-size: 30px;
   cursor: pointer;
 }
 
 /* Hero */
 .hero {
-  height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-  url('g1.jpg');
+  min-height: 90vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('g1.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
   color: white;
+  padding: 20px;
+}
+
+.hero-content {
+  max-width: 900px;
 }
 
 .hero-content h2 {
-  font-size: 30px;
+  font-size: 32px;
 }
 
 .hero-content h1 {
-  font-size: 70px;
-  margin: 10px 0;
+  font-size: 75px;
+  margin: 15px 0;
+  line-height: 1.1;
 }
 
 .hero-content p {
-  font-size: 20px;
-  margin-bottom: 25px;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .hero-buttons button {
-  padding: 14px 28px;
+  padding: 14px 30px;
   border: none;
-  border-radius: 30px;
+  border-radius: 35px;
   background: gold;
   color: #0b2c6a;
-  font-size: 16px;
+  font-size: 17px;
   cursor: pointer;
-  margin: 10px;
   transition: 0.3s;
 }
 
@@ -235,18 +155,20 @@ header {
   margin: auto;
   padding: 80px 20px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2,1fr);
   gap: 50px;
   align-items: center;
 }
 
 .about img {
   width: 100%;
-  border-radius: 20px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 25px;
 }
 
 .about-content h2 {
-  font-size: 42px;
+  font-size: 48px;
   color: #0b2c6a;
   margin-bottom: 20px;
 }
@@ -254,25 +176,26 @@ header {
 .about-content p {
   line-height: 1.8;
   margin-bottom: 30px;
+  font-size: 18px;
 }
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2,1fr);
   gap: 20px;
 }
 
 .stat-box {
   background: white;
-  padding: 25px;
-  border-radius: 20px;
+  padding: 30px;
+  border-radius: 25px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .stat-box h3 {
   color: #0b2c6a;
-  font-size: 32px;
+  font-size: 36px;
 }
 
 /* Notice Board */
@@ -283,34 +206,39 @@ header {
 }
 
 .notice-board h2 {
-  font-size: 42px;
+  font-size: 48px;
   color: #0b2c6a;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .notice-container {
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 25px;
 }
 
 .notice-card {
   background: #f5f7ff;
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.notice-card:hover {
-  transform: translateY(-10px);
 }
 
 .notice-card h3 {
   margin-bottom: 15px;
   color: #0b2c6a;
+}
+
+.delete-btn {
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: crimson;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 /* Director */
@@ -323,20 +251,20 @@ header {
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2,1fr);
   gap: 50px;
   align-items: center;
 }
 
 .director-image img {
-  width: 85%;
-  border-radius: 25px;
-  height: 380px;
+  width: 100%;
+  height: 420px;
   object-fit: cover;
+  border-radius: 25px;
 }
 
 .director-content h2 {
-  font-size: 42px;
+  font-size: 48px;
   color: #0b2c6a;
   margin-bottom: 20px;
 }
@@ -347,10 +275,6 @@ header {
   margin-bottom: 20px;
 }
 
-.director-content h3 {
-  color: #0b2c6a;
-}
-
 /* Features */
 .features {
   background: #eaf0ff;
@@ -359,7 +283,7 @@ header {
 }
 
 .features h2 {
-  font-size: 42px;
+  font-size: 48px;
   color: #0b2c6a;
   margin-bottom: 50px;
 }
@@ -368,7 +292,7 @@ header {
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 30px;
 }
 
@@ -377,11 +301,6 @@ header {
   padding: 40px 25px;
   border-radius: 25px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.feature-card:hover {
-  transform: translateY(-10px);
 }
 
 .feature-card span {
@@ -396,57 +315,49 @@ header {
 .gallery {
   padding: 80px 20px;
   text-align: center;
-  overflow: hidden;
 }
 
 .gallery h2 {
-  font-size: 42px;
+  font-size: 48px;
   color: #0b2c6a;
   margin-bottom: 50px;
 }
 
 .gallery-container {
-  width: 100%;
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2,1fr);
   gap: 25px;
-  overflow: hidden;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.02);
 }
 
 .campus-video {
   max-width: 850px;
   margin: 60px auto 0;
-  text-align: center;
 }
 
 .campus-video h3 {
-  font-size: 32px;
+  font-size: 36px;
   color: #0b2c6a;
   margin-bottom: 25px;
 }
 
 .campus-video video {
   width: 100%;
-  max-height: 450px;
   border-radius: 25px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* Gallery Images */
-
-.gallery-container img {
-  width: 100%;
-  max-width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 20px;
-  transition: 0.3s;
-}
-
-.gallery-container img:hover {
-  transform: scale(1.05);
+  max-height: 450px;
 }
 
 /* Contact */
@@ -458,8 +369,8 @@ header {
 }
 
 .contact h2 {
-  font-size: 42px;
-  margin-bottom: 30px;
+  font-size: 48px;
+  margin-bottom: 40px;
 }
 
 form {
@@ -498,23 +409,23 @@ form button {
 }
 
 .school-contact-info h2 {
-  font-size: 42px;
+  font-size: 48px;
   color: #0b2c6a;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .contact-info-container {
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px;
 }
 
 .info-card {
   background: #f5f7ff;
   padding: 35px 25px;
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
@@ -527,31 +438,9 @@ form button {
   padding: 14px 28px;
   border: none;
   border-radius: 30px;
-  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
   color: white;
-  font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.insta-btn:hover {
-  transform: scale(1.05);
-}
-
-/* Delete Button */
-.delete-btn {
-  margin-top: 15px;
-  padding: 10px 18px;
-  background: crimson;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.delete-btn:hover {
-  background: darkred;
 }
 
 /* Footer */
@@ -562,38 +451,145 @@ footer {
   padding: 20px;
 }
 
-/* Responsive */
+/* Mobile Responsive */
 @media(max-width: 900px) {
 
-  .about,
-  .feature-container,
-  .notice-container,
-  .director-container,
-  .gallery-container,
-  .contact-info-container {
-    grid-template-columns: 1fr;
+  body {
+    overflow-x: hidden;
   }
 
-  .hero-content h1 {
-    font-size: 45px;
+  .navbar {
+    width: 100%;
+    padding: 12px 15px;
+    position: relative;
+  }
+
+  .logo-section {
+    width: 80%;
+  }
+
+  .logo {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .school-logo img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .menu-btn {
+    display: block;
+    z-index: 2001;
   }
 
   .nav-links {
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: 75px;
     right: -100%;
+    width: 75%;
+    height: calc(100vh - 75px);
     background: #0b2c6a;
-    width: 220px;
     flex-direction: column;
-    padding: 20px;
-    transition: 0.3s;
+    align-items: flex-start;
+    padding: 30px 25px;
+    gap: 25px;
+    transition: 0.4s ease;
+    z-index: 2000;
   }
 
   .nav-links.active {
     right: 0;
   }
 
-  .menu-btn {
+  .nav-links li {
+    width: 100%;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 18px;
     display: block;
+    width: 100%;
+  }
+
+  .admin-nav-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .about,
+  .feature-container,
+  .notice-container,
+  .director-container,
+  .gallery-container,
+  .contact-info-container,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 85vh;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content h2 {
+    font-size: 22px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons button {
+    width: 90%;
+    max-width: 280px;
+  }
+
+  .about,
+  .features,
+  .gallery,
+  .notice-board,
+  .director-section,
+  .contact,
+  .school-contact-info {
+    padding: 60px 15px;
+  }
+
+  .about-content h2,
+  .features h2,
+  .gallery h2,
+  .contact h2,
+  .school-contact-info h2,
+  .director-content h2,
+  .notice-board h2 {
+    font-size: 34px;
+  }
+
+  .about img,
+  .director-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .gallery-container img {
+    height: 220px;
+  }
+
+  .campus-video video {
+    max-height: 250px;
+  }
+
+  .contact-info-container {
+    grid-template-columns: 1fr;
   }
 }
+```
